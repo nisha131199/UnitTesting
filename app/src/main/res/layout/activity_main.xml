@@ -1,49 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et1"
-        android:layout_gravity="start"
-        android:hint=""
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_light"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:padding="@dimen/textPadding"
-        android:textSize="@dimen/textSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn3"
-        android:layout_gravity="center"
-        android:text="Red"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_light"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:padding="@dimen/textPadding"
-        android:textSize="@dimen/textSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et1"
+            android:layout_gravity="start"
+            android:hint="Yellow"
+            android:textAllCaps="false"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:padding="@dimen/textPadding"
+            android:textSize="@dimen/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et3"
-        android:layout_gravity="end"
-        android:hint=""
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_blue_light"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:padding="@dimen/textPadding"
-        android:textSize="@dimen/textSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_gravity="center"
+            android:text="Green"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:padding="@dimen/textPadding"
+            android:textSize="@dimen/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et3"
+            android:layout_gravity="end"
+            android:hint="Red"
+            android:textAllCaps="false"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:padding="@dimen/textPadding"
+            android:textSize="@dimen/textSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
