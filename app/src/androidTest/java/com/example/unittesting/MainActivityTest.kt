@@ -1,22 +1,17 @@
 package com.example.unittesting
 
 import android.content.Intent
-import android.support.test.espresso.matcher.ViewMatchers.withId
-import android.support.test.espresso.matcher.ViewMatchers.withText
+import android.support.test.espresso.matcher.ViewMatchers.*
+import androidx.lifecycle.Lifecycle
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.action.ViewActions.typeText
+import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.rule.ActivityTestRule
 import org.hamcrest.core.StringContains.containsString
-import org.junit.Rule
 import org.junit.Test
 
-
 class MainActivityTest {
-
-//    @Rule
-//    var activityTestRule: ActivityTestRule<MainActivity?> = ActivityTestRule(MainActivity::class.java)
 
     @Test
     fun test1() {
@@ -25,13 +20,16 @@ class MainActivityTest {
 
         activityTestRule.launchActivity(Intent())
 
-
         onView(withId(R.id.et1))
-            .perform(typeText("Hello"))
-            .check(matches(withText("Hello")))
+            .perform(typeText("Green"))
+            .check(matches(withText("Green")))
 
+        onView(withId(R.id.et3))
+            .perform(typeText("Yellow"))
+            .check(matches(withText("Yellow")))
 
         onView(withId(R.id.btn3))
+            .perform(longClick())
             .check(matches(withText(containsString("Red"))))
     }
 }
