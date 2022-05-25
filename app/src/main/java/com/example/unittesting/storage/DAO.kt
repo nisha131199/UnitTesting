@@ -12,6 +12,9 @@ interface DAO {
     @Insert
     suspend fun insertData(data: Data)
 
+    @Insert
+    suspend fun insertAllData(list: List<Data>)
+
     @Query("select * from DATA")
     suspend fun getAllData(): List<Data>
 

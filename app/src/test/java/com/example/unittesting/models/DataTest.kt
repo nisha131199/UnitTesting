@@ -17,7 +17,6 @@ import org.junit.Assert.*
 class DataTest {
 
     private var data: Data? = null
-    @Mock
     private lateinit var fakeRepository: Repository
 
     @Before
@@ -29,15 +28,22 @@ class DataTest {
 
     @Test
     fun getData() = runBlocking {
-        val data = Data("Test1", "test1@gmail.com")
+        val data = Data("Test1", "test1@gmail.com", 1)
+        val data2 = Data("Test2", "test2@gmail.com", 2)
+        val data3 = Data("Test3", "test3@gmail.com", 3)
+        val data4 = Data("Test4", "test4@gmail.com", 4)
 
         val insert = fakeRepository.insert(data)
         assertThat(insert).isNotNull()
 
+        fakeRepository.insertAllData(listOf(data2,data3,data4))
+
         val allData = fakeRepository.getData()
-        assertThat(allData).doesNotContain(data)
-        assertTrue(allData.contains(data))
-        println("data ${allData[0].name}")
+        assertFalse(allData.contains(data))
+
+//        assertTrue(allData.contains(data))
+
+        println("data size -> ${allData.size}")
 
         val delete = fakeRepository.delete(data)
         assertThat(delete).isNotNull()
